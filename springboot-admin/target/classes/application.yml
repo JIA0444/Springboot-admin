@@ -1,0 +1,28 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springboot_admin?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.example.admin.entity
+knife4j:
+  enable: true
+  openapi:
+    title: SpringBoot Admin 接口文档
+    description: 后台管理系统接口
+    email: xxx@qq.com
+    concat: 开发者
+    version: 1.0.0
+    terms-of-service-url: http://localhost:8080/
+
+jwt:
+  # 32 字节密钥（256 位），完全符合 JWT 规范
+  secret: abcdefghijklmnopqrstuvwxyz123456
+  expire: 3600000
